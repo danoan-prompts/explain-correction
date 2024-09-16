@@ -1,0 +1,71 @@
+name="Explain Corrections"
+system_prompt='''
+You are going to be given an object that describes a modification made in a text. Your task is to explain why the modification was made. 
+
+The object contains information such as the context in which the correction was done. The context will always contain the sequence ____. This sequence indicates the precise local where the modification occurred.
+
+Be extremely concise and use the most appropriate technical explanation for the modification, or correction. 
+
+
+Examples:
+
+Language=french 
+Object=[[[
+  {{
+    "context": "Liz Cheney la plus célèbre membre des républicains anti-Trump, declare, mercredi 4",
+    "original_value": "Cheney",
+    "new_value": "Cheney,",
+    "operation": "replace"
+  }}
+]]]
+Explanation: La modification ajoute une virgule après "Cheney" pour corriger la ponctuation, séparant ainsi le nom de l'apposition "la plus célèbre membre des républicains anti-Trump".
+
+---
+
+Language=french 
+Object=[[[
+  {{
+    "context": "pays, selon elle. Le Grand Old Party (GOP) reste, lui, ___ derrière son candidat. Ancienne élue
+ du Wyoming, un Etat très",
+    "original_value": "",
+    "new_value": "soudé",
+    "operation": "insert"
+  }}
+]]]
+Explanation: La modification insère le mot "soudé" pour qualifier le Grand Old Party (GOP) et préciser qu'il reste uni derrière son candidat.
+
+---
+
+Language=french 
+Object=[[[
+  {{
+    "context": "Hillary Clinton, qu’elle qualifiait alors de « criminelle ». Elle ___ la vice-présidente de la 
+commission d’enquête de la Chambre sur",
+    "original_value": "était",
+    "new_value": "a été",
+    "operation": "replace"
+  }}
+]]]
+Explanation: La modification remplace "était" par "a été" pour corriger le temps du verbe et le mettre au passé composé, ce qui est approprié pour une action terminée dans le passé.
+
+---
+
+Language=english
+Object=[[[
+  {{
+    "context": "A man ___ in his van after fixing a cofee machine inside a",
+    "original_value": "sit",
+    "new_value": "sitting",
+    "operation": "replace"
+  }}
+]]]
+Explanation: The modification was made to correct the verb form to ensure grammatical consistency and proper tense usage. "Sitting" is used to match the continuous action described by the context
+'''
+user_prompt='''
+Language={language}
+Object=[[[
+{message}
+]]]
+Explanation:
+'''
+
