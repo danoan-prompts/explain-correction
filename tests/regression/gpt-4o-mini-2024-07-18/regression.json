@@ -1,0 +1,23 @@
+[
+  {
+    "input": {
+      "language": "french",
+      "message": "{\"context\": \"Elle se distrait en regardant par la fenêtre et ____ dans sons réflet qu'elle n'a pas mis le rouge à lèvres.\",\"original_value\": \"aperçois\", \"new_value\": \"aperçoit\", \"operation\": \"replace\"}"
+    },
+    "output": "La modification remplace \"aperçois\" par \"aperçoit\" pour corriger la conjugaison du verbe \"apercevoir\" à la troisième personne du singulier, concordant ainsi avec le sujet \"elle\" dans le contexte."
+  },
+  {
+    "input": {
+      "language": "french",
+      "message": "{\"context\": \"Elle se distrait en regardant par la fenêtre et aperçois dans sons ____ qu'elle n'a pas mis le rouge à lèvres.\", \"original_value\": \"réflet\", \"new_value\": \"reflet\", \"operation\": \"replace\"}"
+    },
+    "output": "La modification remplace \"réflet\" par \"reflet\" pour corriger l'orthographe du mot, qui doit être écrit sans accent circonflexe en français."
+  },
+  {
+    "input": {
+      "language": "french",
+      "message": "{\"context\": \"Elle se distrait en regardant par la fenêtre et aperçois dans sons réflet qu'elle n'a pas mis ____ rouge à lèvres.\", \"original_value\": \"le\", \"new_value\": \"de\", \"operation\": \"replace\"}"
+    },
+    "output": "La modification remplace \"le\" par \"de\" pour corriger l'utilisation de l'article défini en français, car dans ce contexte, il est approprié d'utiliser l'article partitif \"de\" pour indiquer une absence de produit cosmétique."
+  }
+]
